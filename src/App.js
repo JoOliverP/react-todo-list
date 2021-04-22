@@ -13,11 +13,12 @@ function App() {
 
   useEffect(()=>{
     getLocalTodos();
-  },[]);// eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
   useEffect(()=>{
     filterHandler();
     saveLocalTodos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[todos,status]);
 
   const filterHandler = () =>{
